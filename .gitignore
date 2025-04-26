@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Model weights
+*.pth
+
+# Images/plots
+*.png
+
+# Data (если приватные/большие)
+data/
+
+# OS
+.DS_Store
+Thumbs.db

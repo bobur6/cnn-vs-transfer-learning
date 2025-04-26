@@ -17,8 +17,11 @@
 Task4/
 ├── main.py                # Основной скрипт
 ├── data/                  # Папка с изображениями (train/val/test)
-├── best_*.pth             # Сохранённые веса моделей (опционально, не заливаются)
-├── All_Models_Metrics.png # График результатов
+├── results/               # Графики и веса моделей (сохраняются автоматически)
+│   ├── All_Models_Metrics.png
+│   ├── best_AlexNet.pth
+│   ├── best_ResNet18_(Transfer).pth
+│   └── best_Simple_CNN.pth
 ├── README.md              # Описание проекта
 ├── requirements.txt       # Список зависимостей
 ├── .gitignore             # Исключения для git
@@ -56,23 +59,23 @@ Task4/
    ```bash
    python main.py
    ```
-   - В конце появится график и файл `All_Models_Metrics.png`.
+   - В конце появится график и файл `results/All_Models_Metrics.png`, а также веса лучших моделей в папке `results/`.
 
 ## Пример вывода
 
 ```
 --- Simple CNN ---
-Epoch 1/5 | Train Acc: 90.00% | Val Acc: 88.00% | Train Loss: 0.25 | Val Loss: 0.30
-...
+Epoch 1/5 | Train Acc: 54.89% | Val Acc: 50.00% | ...
 Final Results:
-Simple CNN: 88.00%
-AlexNet: 92.00%
-ResNet18 (Transfer): 94.00%
+Simple CNN: 66.75%
+AlexNet: 91.00%
+ResNet18 (Transfer): 91.25%
 ```
 
 ## Заметки
-- Веса моделей (`*.pth`) и сами данные (`data/`) заливать в репозиторий не нужно!
+- Веса моделей (`*.pth`) и сами данные (`data/`) заливать в репозиторий не нужно! Все веса и графики автоматически сохраняются в папку `results/`.
 - Для ускорения обучения используется GPU, если доступен.
+- В репозитории должны быть только код, README, requirements.txt и .gitignore.
 
 ---
 
